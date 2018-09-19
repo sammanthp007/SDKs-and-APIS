@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBBD0EAD21528F26003887FB /* BGGeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EAC21528F26003887FB /* BGGeocodingService.swift */; };
+		BBBD0EB021529217003887FB /* BGGeocodingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EAF21529217003887FB /* BGGeocodingRequest.swift */; };
+		BBBD0EB3215292C0003887FB /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EB2215292C0003887FB /* URLGenerator.swift */; };
+		BBBD0EB5215293F7003887FB /* BGGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EB4215293F7003887FB /* BGGeocoding.swift */; };
+		BBBD0EB721529654003887FB /* BGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EB621529654003887FB /* BGError.swift */; };
+		BBBD0EB921529764003887FB /* BGGeocodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EB821529764003887FB /* BGGeocodingManager.swift */; };
 		BBE7B4AA21528B1A00087E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7B4A921528B1A00087E43 /* AppDelegate.swift */; };
 		BBE7B4AC21528B1A00087E43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7B4AB21528B1A00087E43 /* ViewController.swift */; };
 		BBE7B4AF21528B1A00087E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE7B4AD21528B1A00087E43 /* Main.storyboard */; };
@@ -18,6 +24,12 @@
 /* Begin PBXFileReference section */
 		3A4B43A6B36D9A8AED6BB414 /* Pods_BattleOfGeocoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleOfGeocoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		975EA56AF6F80A51A3A409B3 /* Pods-BattleOfGeocoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleOfGeocoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleOfGeocoding/Pods-BattleOfGeocoding.release.xcconfig"; sourceTree = "<group>"; };
+		BBBD0EAC21528F26003887FB /* BGGeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocodingService.swift; sourceTree = "<group>"; };
+		BBBD0EAF21529217003887FB /* BGGeocodingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocodingRequest.swift; sourceTree = "<group>"; };
+		BBBD0EB2215292C0003887FB /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
+		BBBD0EB4215293F7003887FB /* BGGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocoding.swift; sourceTree = "<group>"; };
+		BBBD0EB621529654003887FB /* BGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGError.swift; sourceTree = "<group>"; };
+		BBBD0EB821529764003887FB /* BGGeocodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocodingManager.swift; sourceTree = "<group>"; };
 		BBE7B4A621528B1A00087E43 /* BattleOfGeocoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleOfGeocoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE7B4A921528B1A00087E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE7B4AB21528B1A00087E43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +52,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBBD0EAB21528F07003887FB /* Services and Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD0EAC21528F26003887FB /* BGGeocodingService.swift */,
+				BBBD0EB821529764003887FB /* BGGeocodingManager.swift */,
+			);
+			path = "Services and Managers";
+			sourceTree = "<group>";
+		};
+		BBBD0EAE21529206003887FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD0EAF21529217003887FB /* BGGeocodingRequest.swift */,
+				BBBD0EB4215293F7003887FB /* BGGeocoding.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBBD0EB1215292B0003887FB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD0EB2215292C0003887FB /* URLGenerator.swift */,
+				BBBD0EB621529654003887FB /* BGError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BBE7B49D21528B1900087E43 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +100,9 @@
 		BBE7B4A821528B1A00087E43 /* BattleOfGeocoding */ = {
 			isa = PBXGroup;
 			children = (
+				BBBD0EB1215292B0003887FB /* Utils */,
+				BBBD0EAE21529206003887FB /* Models */,
+				BBBD0EAB21528F07003887FB /* Services and Managers */,
 				BBE7B4A921528B1A00087E43 /* AppDelegate.swift */,
 				BBE7B4AB21528B1A00087E43 /* ViewController.swift */,
 				BBE7B4AD21528B1A00087E43 /* Main.storyboard */,
@@ -219,6 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE7B4AC21528B1A00087E43 /* ViewController.swift in Sources */,
+				BBBD0EB021529217003887FB /* BGGeocodingRequest.swift in Sources */,
+				BBBD0EB3215292C0003887FB /* URLGenerator.swift in Sources */,
+				BBBD0EAD21528F26003887FB /* BGGeocodingService.swift in Sources */,
+				BBBD0EB721529654003887FB /* BGError.swift in Sources */,
+				BBBD0EB5215293F7003887FB /* BGGeocoding.swift in Sources */,
+				BBBD0EB921529764003887FB /* BGGeocodingManager.swift in Sources */,
 				BBE7B4AA21528B1A00087E43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +415,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K86KHC28SR;
 				INFOPLIST_FILE = BattleOfGeocoding/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammanapps.BattleOfGeocoding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -383,7 +434,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K86KHC28SR;
 				INFOPLIST_FILE = BattleOfGeocoding/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammanapps.BattleOfGeocoding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
