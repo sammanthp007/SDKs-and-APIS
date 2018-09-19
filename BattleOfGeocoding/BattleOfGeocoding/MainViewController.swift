@@ -19,7 +19,6 @@ class MainViewController: UIViewController {
         // setup tableview
         tableView.dataSource = self
         tableView.estimatedRowHeight = 150
-        tableView.rowHeight = 150
         tableView.tableFooterView = UIView()
         let indicator = UIActivityIndicatorView()
         indicator.startAnimating()
@@ -51,6 +50,7 @@ class MainViewController: UIViewController {
                 nativeGeocoding.geoCode()
                 }.then { (geocoding) -> Void in
                     geocodingResult.native = geocoding
+                    print ("done geocoding")
                 }.then {() -> Promise<BGGeocoding> in
                     // use google maps api for geocoding
                     geocodingService.getGeocoding()

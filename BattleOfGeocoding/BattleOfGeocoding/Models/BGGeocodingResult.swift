@@ -20,7 +20,7 @@ class BGGeocodingResult {
     }
     
     func getDistance() -> Int? {
-        if native != nil || googleMaps != nil {
+        if native != nil && googleMaps != nil {
             let coordinate1 = CLLocation(latitude: native!.coordinates.latitude, longitude: native!.coordinates.longitude)
             let coordinate2 = CLLocation(latitude: googleMaps!.coordinates.latitude, longitude: googleMaps!.coordinates.longitude)
             return Int(coordinate1.distance(from: coordinate2))
