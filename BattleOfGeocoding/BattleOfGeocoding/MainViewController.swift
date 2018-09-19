@@ -11,10 +11,22 @@ import PromiseKit
 
 class MainViewController: UIViewController {
     var geocodingResults = [BGGeocodingResult]()
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // setup tableview
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 150
+        tableView.rowHeight = 150
+        tableView.tableFooterView = UIView()
+        let indicator = UIActivityIndicatorView()
+        indicator.startAnimating()
+        indicator.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+        indicator.color = .black
+        tableView.tableHeaderView = indicator
+        
         self.testAddresses()
     }
 
@@ -76,8 +88,57 @@ extension MainViewController {
         self.geocodingResults.append(geocodingResult)
         if geocodingResults.count == getAddresses().count {
             print ("Received all")
-//            tableView.reloadData()
-//            tableView.tableHeaderView = UIView()
+            tableView.reloadData()
+            tableView.tableHeaderView = UIView()
         }
+    }
+}
+
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return geocodingResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultGeocodingCellView", for: indexPath) as! ResultGeocodingCellView
+        cell.isUserInteractionEnabled = false
+        cell.addressLabel.text = geocodingResults[indexPath.row].address
+        let distance = geocodingResults[indexPath.row].getDistance()
+        cell.distanceLabel.textColor = .red
+        if distance == nil {
+            cell.distanceLabel.text = "Error!"
+        } else if distance! > 1000 {
+            cell.distanceLabel.text = "Distance \((distance! / 1000).description)km is a different place!"
+        } else {
+            cell.distanceLabel.text = "Distance \(distance!.description)m"
+            cell.distanceLabel.textColor = .black
+        }
+        
+        //Google results
+        cell.googleStatusLabel.sizeToFit()
+        if let googleGeocoding = geocodingResults[indexPath.row].googleMaps {
+            cell.googleStatusLabel.text = "Status: Ok"
+            cell.googleStatusLabel.backgroundColor = .green
+            cell.googleLatitudeLabel.text = googleGeocoding.coordinates.latitude.description
+            cell.googleLongitudeLabel.text = googleGeocoding.coordinates.longitude.description
+        } else {
+            cell.googleStatusLabel.text = "Not found!"
+            cell.googleStatusLabel.textColor = .white
+            cell.googleStatusLabel.backgroundColor = .red
+        }
+        //iOS SDK results
+        cell.iosStatusLabel.sizeToFit()
+        if let iosGeocoding = geocodingResults[indexPath.row].native {
+            cell.iosStatusLabel.text = "Status: Ok"
+            cell.iosStatusLabel.backgroundColor = .green
+            cell.iosLatitudeLabel.text = iosGeocoding.coordinates.latitude.description
+            cell.iosLongitudeLabel.text = iosGeocoding.coordinates.longitude.description
+        } else {
+            cell.iosStatusLabel.text = "Not found!"
+            cell.iosStatusLabel.textColor = .white
+            cell.iosStatusLabel.backgroundColor = .red
+        }
+        
+        return cell
     }
 }

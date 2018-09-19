@@ -15,6 +15,7 @@
 		BBBD0EB921529764003887FB /* BGGeocodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EB821529764003887FB /* BGGeocodingManager.swift */; };
 		BBBD0EBB21529BF4003887FB /* BGNativeGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EBA21529BF4003887FB /* BGNativeGeocoding.swift */; };
 		BBBD0EBD2152A17D003887FB /* BGGeocodingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EBC2152A17D003887FB /* BGGeocodingResult.swift */; };
+		BBBD0EC02152A5A7003887FB /* ResultGeocodingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0EBF2152A5A7003887FB /* ResultGeocodingCellView.swift */; };
 		BBE7B4AA21528B1A00087E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7B4A921528B1A00087E43 /* AppDelegate.swift */; };
 		BBE7B4AC21528B1A00087E43 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7B4AB21528B1A00087E43 /* MainViewController.swift */; };
 		BBE7B4AF21528B1A00087E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE7B4AD21528B1A00087E43 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		BBBD0EB821529764003887FB /* BGGeocodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocodingManager.swift; sourceTree = "<group>"; };
 		BBBD0EBA21529BF4003887FB /* BGNativeGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNativeGeocoding.swift; sourceTree = "<group>"; };
 		BBBD0EBC2152A17D003887FB /* BGGeocodingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGeocodingResult.swift; sourceTree = "<group>"; };
+		BBBD0EBF2152A5A7003887FB /* ResultGeocodingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeocodingCellView.swift; sourceTree = "<group>"; };
 		BBE7B4A621528B1A00087E43 /* BattleOfGeocoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleOfGeocoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE7B4A921528B1A00087E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE7B4AB21528B1A00087E43 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		BBBD0EBE2152A594003887FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD0EBF2152A5A7003887FB /* ResultGeocodingCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BBE7B49D21528B1900087E43 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		BBE7B4A821528B1A00087E43 /* BattleOfGeocoding */ = {
 			isa = PBXGroup;
 			children = (
+				BBBD0EBE2152A594003887FB /* Views */,
 				BBBD0EB1215292B0003887FB /* Utils */,
 				BBBD0EAE21529206003887FB /* Models */,
 				BBBD0EAB21528F07003887FB /* Services and Managers */,
@@ -266,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBD0EC02152A5A7003887FB /* ResultGeocodingCellView.swift in Sources */,
 				BBE7B4AC21528B1A00087E43 /* MainViewController.swift in Sources */,
 				BBBD0EB021529217003887FB /* BGGeocodingRequest.swift in Sources */,
 				BBBD0EB3215292C0003887FB /* URLGenerator.swift in Sources */,
