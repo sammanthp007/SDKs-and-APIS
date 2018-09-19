@@ -8,3 +8,8 @@
 ## For Google Maps API
 - [Get API key from
   here](https://developers.google.com/maps/documentation/javascript/get-api-key)
+
+
+## Video Walkthrough
+The final product (google maps API not working right now) looks like this
+![Video Walkthrough](videowalkthrough.gif)
