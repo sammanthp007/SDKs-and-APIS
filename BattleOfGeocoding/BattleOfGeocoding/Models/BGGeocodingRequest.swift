@@ -20,7 +20,7 @@ class BGGeocodingRequest {
     func toParameters() -> Parameters {
         let parameters: Parameters = [
             "address": self.address,
-            "key": "AIzaSyCPI33xuqQQ-xWgULJUMxU16YKb6a5kBhY"
+            "key": "YOUR_API_KEY"
         ]
         
         return parameters
