@@ -12,4 +12,4 @@
 
 ## Video Walkthrough
 The final product (google maps API not working right now) looks like this
-![Video Walkthrough](videowalkthrough.gif)
+![Video Walkthrough](walkthrough.mov)
