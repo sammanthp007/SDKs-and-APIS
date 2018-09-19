@@ -9,8 +9,7 @@
 import Foundation
 
 enum BGError: Error {
-    case unKnowIntent
-    case weatherManagerDictionary
-    case aiManagerDictionary
+    case unKnownError
+    case noMatchingLocation
     case geocodingManagerDictionary
 }
