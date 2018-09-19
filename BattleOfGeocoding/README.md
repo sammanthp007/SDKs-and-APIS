@@ -13,3 +13,6 @@
 ## Video Walkthrough
 The final product (google maps API not working right now) looks like this
 ![Video Walkthrough](walkthrough.mov)
+
+
+Get API key from [here](https://console.cloud.google.com/apis/credentials?project=battleofgeocodin-1537366294386)
